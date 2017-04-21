@@ -7,8 +7,13 @@
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
+      <h2>Link to My Favorites</h2>
+      <div>
+        <%= link_to 'My Favorites', favoritings_user_path(current_user) , class: 'btn btn-primary btn-block'%>
+      </div>
     </aside>
     <div class="col-xs-8">
+      <h2>Time Line</h2>
       <%= render 'microposts/microposts', microposts: @microposts, user: @user %>
     </div>
   </div>
